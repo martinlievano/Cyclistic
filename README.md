@@ -12,3 +12,4 @@ In 2016, Cyclistic launched a successful bike-share offering. Since then, the pr
 
 You are ajunior data analyst working on the marketing analyst team at Cyclistic. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve your recommendations, so they must be backed upwith compeling data insights and professional data visualizations.
 
+https://www.kaggle.com/datasets/martinlievano/cyclistic
