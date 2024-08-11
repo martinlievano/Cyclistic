@@ -81,6 +81,10 @@ The data set consists of 13 variables, as shown in the following with the data t
 |12	 |end_lng	            |Longitude of ending station                  |Float     |Nullable   |
 |13	 |member_casual	      |Type of membership of each rider             |String    |Nullable   |
 
+start_station_name	|Name of the station where the ride started   |String    |Nullable   |
+|start_station_id |
+|end_station_name	|
+
 Data Cleaning
 Before analyzing the data, the dataset was cleaned by:
 
