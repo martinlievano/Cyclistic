@@ -57,7 +57,7 @@ The basis for this analysis is 2023-2024 data and the steps for processing the d
 
 **Data Combining**
 
-The 12 tables from July 2023 to June 2024 were stacked and combined into a single table. The table consists of 5,146,805 rows.
+The 12 tables from July 2023 to June 2024 were stacked and combined into a single table. The table consists of 5,731,032 rows.
 
 **Data Exploration**
 
@@ -68,14 +68,14 @@ The data set consists of 13 variables, as shown in the following with the data t
 | No.|      Variable 	    |                 Description                 |   Type   |   Mode    |
 |----|--------------------|---------------------------------------------|----------|-----------|
 |1   |ride_id             |ID number assigned to each ride              |String    |Nullable   |
-|2	 |rideable_type	      |Electric bike, Classic bike and, Docked bike |String    |Nullable   |
-|3   |started_at	        |Date and time at the start of trip           |Timestamp |Nullable   |
-|4	 |ended_at	          |Date and time at the end of trip             |Timestamp |Nullable   |
-|5	 |start_station_name	|Name of the station where the ride started   |String    |Nullable   |
-|6	 |start_station_id	  |ID of the station where the ride started     |String    |Nullable   |
-|7	 |end_station_name	  |Name of the station where the ride ended     |String    |Nullable   |
-|8	 |end_station_id	    |ID of the station where the ride ended       |String    |Nullable   |
-|9	 |start_lat	          |Latitude of starting station                 |Float     |Nullable   |
+|2	  |rideable_type	      |Electric bike, Classic bike and, Docked bike |String    |Nullable   |
+|3   |started_at	         |Date and time at the start of trip           |Timestamp |Nullable   |
+|4	  |ended_at	           |Date and time at the end of trip             |Timestamp |Nullable   |
+|5	  |start_station_name	 |Name of the station where the ride started   |String    |Nullable   |
+|6	  |start_station_id	   |ID of the station where the ride started     |String    |Nullable   |
+|7	  |end_station_name	   |Name of the station where the ride ended     |String    |Nullable   |
+|8 	 |end_station_id	     |ID of the station where the ride ended       |String    |Nullable   |
+|9	  |start_lat	          |Latitude of starting station                 |Float     |Nullable   |
 |10	 |start_lng	          |Longitude of starting station                |Float     |Nullable   |
 |11	 |end_lat	            |Latitude of ending station                   |Float     |Nullable   |
 |12	 |end_lng	            |Longitude of ending station                  |Float     |Nullable   |
