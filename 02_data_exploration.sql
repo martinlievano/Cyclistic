@@ -1,4 +1,5 @@
---Check the number of empty values in each column
+
+-- Check the number of empty values in each column
 
 SELECT 	COUNT(rideable_type) AS rideable_type,
 		COUNT(started_at) AS started_at,
@@ -13,7 +14,12 @@ WHERE rideable_type <> ''
 	AND start_station_name <> '' 
 	AND end_station_name <> '' 
 	AND member_casual <> '' 
+-- 578.164 values in start_station_name and 549.886 valUes in end_station_name ae NULL
 
-  
-4568467
-4596919
+-- Explore data one by one from left column to right column
+	
+-- 2) rideable_type: determine the type of bikes 
+SELECT rideable_type
+FROM `2022_divvy_trip_data.cyclistic_data`
+GROUP BY rideable_type;
+-- there are three types of bike: classic, electric and docked 
