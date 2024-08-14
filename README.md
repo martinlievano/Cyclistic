@@ -89,7 +89,7 @@ Before analyzing the data, the dataset was cleaned by:
 + Adding 2 new columns: 'ride_length' and 'day_of_week'.
 + Exclusing the rides with duration less than a minute or longer than a day.
 
-In total, 4,224,062 rows were returned, which means 1,443,655 rows were removed.
+In total, 5,479,974 rows were returned, which means 251,058 rows were removed.
 
 4. Analyze
 Data Analysis
