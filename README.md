@@ -43,7 +43,7 @@ Design marketing strategies aimed at converting casual riders into annual member
 
 **Tools**
 
-- Data cleaning & processing - SQL on Google Big Query
+- Data cleaning & processing - MySQL
 - Data visualization - Power BI
 
 ### 3. PROCESS
@@ -80,11 +80,6 @@ The data set consists of 13 variables, as shown in the following with the data t
 |11	 |end_lat	            |Latitude of ending station                   |Float     |Nullable   |
 |12	 |end_lng	            |Longitude of ending station                  |Float     |Nullable   |
 |13	 |member_casual	      |Type of membership of each rider             |String    |Nullable   |
-
-|    Variable     |Empties|
-|-----------------|-------|
-|start_station_id |578.164|
-|end_station_name	|549.886|
 
 **Data Cleaning**
 
