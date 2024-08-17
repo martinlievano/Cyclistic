@@ -104,7 +104,7 @@ The figure below shows the total number of rides carried out by Cyclistic member
 
 IMG1
 
-Cyclistic members recorded a greater bicycle activity than casual riders. The total rides for Cyclistic members are 2,511,003 while 1,713,059 trips for casual riders.
+Cyclistic members recorded a greater bicycle activity than casual riders. The total rides for Cyclistic members are 2,759,235 while 2,687,571 trips for casual riders.
 Cyclistic members accounted for about 59.4% of total rides whereas casual riders made up 40.6% of total rides in 2022.
 
 - Types of Bikes
@@ -113,7 +113,7 @@ The types of bicycles used for the trips are displayed as follo
 IMG2
 
 There are three types of bicycles: classic, electric and docked bikes.
-Cyclistic members and casual riders prefer show a higher preference for classic bicycles over electric bicycles.
+Cyclistic members and casual riders prefer show a higher preference for classic bicycles 2,759,235 over electric bicycles 2,687,571.
 Casual riders have also used the docked bicycles.
 
 - Average Ride Duration
