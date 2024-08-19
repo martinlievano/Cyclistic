@@ -102,7 +102,7 @@ The cleaned data is imported into Tableau for analysis and the figures plotted a
 - Total Rides in 2022
 The figure below shows the total number of rides carried out by Cyclistic members and casual riders in 2022.
 
-IMG1
+![1](https://github.com/user-attachments/assets/5c752ea2-84ba-43e9-9d13-aa979e2c947a)
 
 Cyclistic members recorded a greater bicycle activity than casual riders. The total rides for Cyclistic members are 2,759,235 while 2,687,571 trips for casual riders.
 Cyclistic members accounted for about 59.4% of total rides whereas casual riders made up 40.6% of total rides in 2022.
@@ -110,7 +110,8 @@ Cyclistic members accounted for about 59.4% of total rides whereas casual riders
 - Types of Bikes
 The types of bicycles used for the trips are displayed as follo
 
-IMG2
+![2](https://github.com/user-attachments/assets/1a5d1404-a423-45de-8706-4141dd1b21b3)
+
 
 There are three types of bicycles: classic, electric and docked bikes.
 Cyclistic members and casual riders prefer show a higher preference for classic bicycles 2,759,235 over electric bicycles 2,687,571.
@@ -119,14 +120,14 @@ Casual riders have also used the docked bicycles.
 - Average Ride Duration
 The average ride length is plotted against the type of users (member vs. casual):
 
-IMG3
+![3](https://github.com/user-attachments/assets/63cfb8cd-5df9-4327-b9dd-1c0faee4cfe0)
 
 Cyclistic members can ride on the bicycles for about 12.41 minutes on average whereas casual riders have an average ride length of 23.82 minutes. Hence, the ride duration of Cyclistic members are approximately two times smalelr than casual riders.
 
  Trips Taken in a Month
 The preference of cycling activity can be determined by drawing the graph of trips taken against month from January to December 2022.
 
-IMG4
+ ![4](https://github.com/user-attachments/assets/0c3d7a53-b2fe-4d05-b06c-7ffb55489bf2)
 
 Both Cyclistic members and casual riders have the lowest activity, 65,051 rides and 12,355 rides respectively in January 2022.
 Cyclistic members have the highest activity (323,073 rides) in August 2022.
@@ -135,7 +136,7 @@ Casual riders have the greatest activity (303,273 rides) in July 2022.
 - Average Ride Length in a Month
 The mean trip duration is depicted in the line graph below.
 
-IMG5
+![5](https://github.com/user-attachments/assets/ca55eff0-d949-4ea6-bb57-7fa2b6f7a958)
 
 The monthly average ride duration for Cyclistic members is the highest in June (13.65 minutes).
 For casual riders, the highest mean trip duration is in May (27.75 minutes).
@@ -144,7 +145,8 @@ For casual riders, the highest mean trip duration is in May (27.75 minutes).
 - Trips Taken in a Week
 The bar chart below is used to study the daily user activity over a week.
 
-IMG6
+![6](https://github.com/user-attachments/assets/6b16709c-c751-4727-8a6d-fe316905d8fd)
+
 
 Generally, bike rides are most frequented on Saturdays.
 Cyclistic members have the highest activity (399,863 rides) on Thursdays while the lowest activity (286,128 rides) on Mondays.
@@ -153,10 +155,13 @@ Casual riders have the greatest activity (357,781rides) on Saturdays while the l
 - Average Ride Length in a Week
 The mean ride duration across the week is displayed as follow.
 
-IMG7
+![7](https://github.com/user-attachments/assets/b8ae7b87-60ee-4fdf-ad5d-0bfeb5c2f3ce)
 
 Cyclistic members cycled the longest on Saturday with an average ride length of 14.01 minutes.
 On the other hand, casual riders cycled the longest on Sunday with a mean trip duration of 27.18 minutes.
+
+https://uexternadoedu-my.sharepoint.com/:u:/g/personal/martin_lievano_est_uexternado_edu_co/EQ01lQI9bV9DhNEgVgNaWEsBiZaN-C2JLp6hkgHtBG1msg?e=PoaUd8
+
 
 The similiarities and differences between Cyclistic members and casual riders were drawn from the dashboard above.
 
