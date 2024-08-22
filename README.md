@@ -52,7 +52,7 @@ The basis for this analysis is 2023-2024 data and the steps for processing the d
 
 + [Data Combining](https://github.com/martinlievano/Cyclistic/blob/main/01_data_combinig.sql)
 + [Data Exploration](https://github.com/martinlievano/Cyclistic/blob/main/02_data_exploration.sql)
-+ [Data Cleaning]
++ [Data Cleaning](https://github.com/martinlievano/Cyclistic/blob/main/03_data_cleaning.sql)
 + [Data Analysis]
 
 **Data Combining**
