@@ -53,7 +53,7 @@ The basis for this analysis is 2023-2024 data and the steps for processing the d
 + [Data Combining](https://github.com/martinlievano/Cyclistic/blob/main/01_data_combinig.sql)
 + [Data Exploration](https://github.com/martinlievano/Cyclistic/blob/main/02_data_exploration.sql)
 + [Data Cleaning](https://github.com/martinlievano/Cyclistic/blob/main/03_data_cleaning.sql)
-+ [Data Analysis]
++ [Data Analysis](https://github.com/martinlievano/Cyclistic/blob/main/04_data_analysis.sql)
 
 **Data Combining**
 
@@ -67,19 +67,19 @@ The data set consists of 13 variables, as shown in the following with the data t
 
 | No.|      Variable 	    |                 Description                 |   Type   |   Mode    |
 |----|--------------------|---------------------------------------------|----------|-----------|
-|1   |ride_id             |ID number assigned to each ride              |String    |Nullable   |
-|2	  |rideable_type	      |Electric bike, Classic bike and, Docked bike |String    |Nullable   |
+|1   |ride_id             |ID number assigned to each ride              |Varchar   |Nullable   |
+|2	  |rideable_type	      |Electric bike, Classic bike and, Docked bike |Varchar   |Nullable   |
 |3   |started_at	         |Date and time at the start of trip           |Timestamp |Nullable   |
 |4	  |ended_at	           |Date and time at the end of trip             |Timestamp |Nullable   |
-|5	  |start_station_name	 |Name of the station where the ride started   |String    |Nullable   |
-|6	  |start_station_id	   |ID of the station where the ride started     |String    |Nullable   |
-|7	  |end_station_name	   |Name of the station where the ride ended     |String    |Nullable   |
-|8 	 |end_station_id	     |ID of the station where the ride ended       |String    |Nullable   |
+|5	  |start_station_name	 |Name of the station where the ride started   |Varchar   |Nullable   |
+|6	  |start_station_id	   |ID of the station where the ride started     |Varchar   |Nullable   |
+|7	  |end_station_name	   |Name of the station where the ride ended     |Varchar   |Nullable   |
+|8 	 |end_station_id	     |ID of the station where the ride ended       |Varchar   |Nullable   |
 |9	  |start_lat	          |Latitude of starting station                 |Float     |Nullable   |
 |10	 |start_lng	          |Longitude of starting station                |Float     |Nullable   |
 |11	 |end_lat	            |Latitude of ending station                   |Float     |Nullable   |
 |12	 |end_lng	            |Longitude of ending station                  |Float     |Nullable   |
-|13	 |member_casual	      |Type of membership of each rider             |String    |Nullable   |
+|13	 |member_casual	      |Type of membership of each rider             |Tinytext  |Nullable   |
 
 **Data Cleaning**
 
@@ -99,47 +99,45 @@ How do annual members and casual riders use Cyclistic bikes differently?
 
 The cleaned data is imported into Tableau for analysis and the figures plotted are displayed in the following.
 
-- Total Rides in 2022
-The figure below shows the total number of rides carried out by Cyclistic members and casual riders in 2022.
+- Total Rides in 2023-2024
+The figure below shows the total number of rides carried out by Cyclistic members and casual riders in the period July 2023 - JUne 2024.
 
 ![1](https://github.com/user-attachments/assets/5c752ea2-84ba-43e9-9d13-aa979e2c947a)
 
-Cyclistic members recorded a greater bicycle activity than casual riders. The total rides for Cyclistic members are 2,759,235 while 2,687,571 trips for casual riders.
-Cyclistic members accounted for about 59.4% of total rides whereas casual riders made up 40.6% of total rides in 2022.
+Cyclistic members recorded a greater bicycle activity than casual riders. The total rides for Cyclistic members are 3,520.159 while 1,959,814 trips for casual riders.
+Cyclistic members accounted for about 64% of total rides whereas casual riders made up 36% of total rides in the period analyzed.
 
 - Types of Bikes
-The types of bicycles used for the trips are displayed as follo
+The types of bicycles used for the trips are displayed as following
 
 ![2](https://github.com/user-attachments/assets/1a5d1404-a423-45de-8706-4141dd1b21b3)
 
-
 There are three types of bicycles: classic, electric and docked bikes.
 Cyclistic members and casual riders prefer show a higher preference for classic bicycles 2,759,235 over electric bicycles 2,687,571.
-Casual riders have also used the docked bicycles.
+Casual riders have also used the docked bicycles 33,168 times.
 
 - Average Ride Duration
 The average ride length is plotted against the type of users (member vs. casual):
 
-![3](https://github.com/user-attachments/assets/63cfb8cd-5df9-4327-b9dd-1c0faee4cfe0)
+![3](https://github.com/user-attachments/assets/152ef948-7e58-437a-83cd-90ce19800ebe)
 
-Cyclistic members can ride on the bicycles for about 12.41 minutes on average whereas casual riders have an average ride length of 23.82 minutes. Hence, the ride duration of Cyclistic members are approximately two times smalelr than casual riders.
+Cyclistic members can ride on the bicycles for about 12.3 minutes on average whereas casual riders have an average ride length of 21.6 minutes. Hence, the ride duration of Cyclistic members are approximately two times smalelr than casual riders.
 
- Trips Taken in a Month
-The preference of cycling activity can be determined by drawing the graph of trips taken against month from January to December 2022.
+- Trips Taken in a Month
+The preference of cycling activity can be determined by drawing the graph of trips taken against month from July 2023 to June 2024.
 
  ![4](https://github.com/user-attachments/assets/0c3d7a53-b2fe-4d05-b06c-7ffb55489bf2)
 
-Both Cyclistic members and casual riders have the lowest activity, 65,051 rides and 12,355 rides respectively in January 2022.
-Cyclistic members have the highest activity (323,073 rides) in August 2022.
-Casual riders have the greatest activity (303,273 rides) in July 2022.
+Both Cyclistic members and casual riders had the lowest activity, 113,015 rides and 23,185 rides respectively in January 2024.
+The highest activity (738,825 rides) was in August 2023, with 440,305 rides for members and 298,520 rides for casuals, but the month with the highest activity for casuals was July 2023 with 316,965 rides.
 
 - Average Ride Length in a Month
 The mean trip duration is depicted in the line graph below.
 
 ![5](https://github.com/user-attachments/assets/ca55eff0-d949-4ea6-bb57-7fa2b6f7a958)
 
-The monthly average ride duration for Cyclistic members is the highest in June (13.65 minutes).
-For casual riders, the highest mean trip duration is in May (27.75 minutes).
+The monthly average ride duration for Cyclistic members is the highest in August 2023 (13.23 minutes).
+For casual riders, the highest mean trip duration is in May (24.11 minutes).
 
 
 - Trips Taken in a Week
@@ -149,16 +147,16 @@ The bar chart below is used to study the daily user activity over a week.
 
 
 Generally, bike rides are most frequented on Saturdays.
-Cyclistic members have the highest activity (399,863 rides) on Thursdays while the lowest activity (286,128 rides) on Mondays.
-Casual riders have the greatest activity (357,781rides) on Saturdays while the least activity (191,467 rides) on Tuesdays.
+Cyclistic members have the highest activity (565,654 rides) on Wednesdays while the lowest activity (405,234 rides) on Sundays.
+Casual riders have the greatest activity (398,855 rides) on Saturdays while the least activity (227,049 rides) on Mondays.
 
 - Average Ride Length in a Week
 The mean ride duration across the week is displayed as follow.
 
 ![7](https://github.com/user-attachments/assets/b8ae7b87-60ee-4fdf-ad5d-0bfeb5c2f3ce)
 
-Cyclistic members cycled the longest on Saturday with an average ride length of 14.01 minutes.
-On the other hand, casual riders cycled the longest on Sunday with a mean trip duration of 27.18 minutes.
+Cyclistic members cycled the longest on Saturday with an average ride length of 13,9 minutes.
+On the other hand, casual riders cycled the longest on Saturday with a mean trip duration of 25.3 minutes.
 
 https://uexternadoedu-my.sharepoint.com/:u:/g/personal/martin_lievano_est_uexternado_edu_co/EQ01lQI9bV9DhNEgVgNaWEsBiZaN-C2JLp6hkgHtBG1msg?e=PoaUd8
 
