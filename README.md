@@ -2,7 +2,7 @@
 
 ## Introduction
 
-These datasets are used for the case study as the capstone project in Google Data Analytics course on Coursera
+These datasets are used for the case study as the capstone project in Google Data Analytics course on Coursera.
 
 For the purposes of this case study, the datasets are appropriate and will enable you to answer the business questions. The data has been made available by Motivate International Inc. under this license and Cyclistic is a fictional company located in Chicago, USA.
 
@@ -97,7 +97,7 @@ The analysis question is:
 
 How do annual members and casual riders use Cyclistic bikes differently?
 
-The cleaned data is imported into Tableau for analysis and the figures plotted are displayed in the following.
+The cleaned data is imported into Power BI for analysis and the figures plotted are displayed in the following.
 
 - Total Rides in 2023-2024
 The figure below shows the total number of rides carried out by Cyclistic members and casual riders in the period July 2023 - JUne 2024.
@@ -158,7 +158,7 @@ The mean ride duration across the week is displayed as follow.
 Cyclistic members cycled the longest on Saturday with an average ride length of 13,9 minutes.
 On the other hand, casual riders cycled the longest on Saturday with a mean trip duration of 25.3 minutes.
 
-https://uexternadoedu-my.sharepoint.com/:u:/g/personal/martin_lievano_est_uexternado_edu_co/EQ01lQI9bV9DhNEgVgNaWEsBiZaN-C2JLp6hkgHtBG1msg?e=PoaUd8
+[Public Power BI visualization](https://uexternadoedu-my.sharepoint.com/:u:/g/personal/martin_lievano_est_uexternado_edu_co/EQ01lQI9bV9DhNEgVgNaWEsBiZaN-C2JLp6hkgHtBG1msg?e=PoaUd8)
 
 
 The similiarities and differences between Cyclistic members and casual riders were drawn from the dashboard above.
