@@ -56,8 +56,8 @@ The basis for this analysis is 2023-2024 data and the steps for processing the d
 + [Data Cleaning](https://github.com/martinlievano/Cyclistic/blob/main/03_data_cleaning.sql)
 + [Data Analysis](https://github.com/martinlievano/Cyclistic/blob/main/04_data_analysis.sql)
 
-[Data Combining](martinlievano/Cyclistic/blob/main/Cyclistic.md/data.combining)
-[Data Exploration](martinlievano/Cyclistic/blob/main/Cyclistic.md/data-exploration)
+[Data Combining](martinlievano/Cyclistic/blob/main/Cyclistic/data.combining)
+[Data Exploration](martinlievano/Cyclistic/blob/main/Cyclistic/data-exploration)
 
 **Data Combining**
 
