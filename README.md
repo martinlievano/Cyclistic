@@ -58,9 +58,112 @@ The basis for this analysis is 2023-2024 data and the steps for processing the d
 
 **Data Combining**
 
+```sql
+
+--The first step was to create the database and the table before upload the datasets
+
+create database cyclistic
+
+create table cyclistic_users (
+ride_id varchar (50),
+rideable_type varchar (100),
+started_at datetime,
+ended_at datetime,
+start_station_name varchar (100),
+start_station_id varchar (50),
+end_station_name varchar (100),
+end_station_id varchar (50),
+start_lat float,
+start_lng	float,
+end_lat float,
+end_lng	float,
+member_casual text (20)
+);
+
+--Then, we continue uploading de .csv files in the Command Line, one time for each file.
+
+load data local infile 'C:\\Users\\nicli\\OneDrive\\Documentos\\Cyclistic\\FILENAME.csv' 
+into table cyclistic_users
+fields terminated by ';'
+optionally enclosed by ' '
+lines terminated by '\n'
+ignore 1 rows;
+
+```
+
+
 The 12 tables from July 2023 to June 2024 were stacked and combined into a single table. The table consists of 5,731,032 rows.
 
 **Data Exploration**
+
+```sql
+-- 1) Check the number of empty values in each column
+
+SELECT 	COUNT(NULLIF(rideable_type, '')) AS rideable_type,
+	COUNT(started_at) AS started_at,
+	COUNT(ended_at) AS ended_at,
+	COUNT(NULLIF(start_station_name, '')) AS start_station_name,
+	COUNT(NULLIF(end_station_name, '')) AS end_station_name,
+	COUNT(NULLIF(start_lat, '')) AS start_lat,
+	COUNT(NULLIF(start_lng, '')) AS start_lng,
+	COUNT(NULLIF(end_lat, '')) AS end_lat,
+	COUNT(NULLIF(end_lng, '')) AS end_lng,
+	COUNT(NULLIF(member_casual, '')) AS member_casual
+FROM cyclistic_users
+-- 908,003 values in start_station_name and 980,556 in end_station_name are NULL. The rest of the columns have all the values.
+
+-- Explore data one by one from left column to right column
+
+-- 2) rider_id: the length of the rider id should be uniform 
+SELECT LENGTH(ride_id) as rider_id_length
+FROM cyclistic_users
+GROUP BY LENGTH(ride_id);
+-- the ride_id is consistent with 16 characters.
+
+-- 3) rideable_type: determine the type of bikes 
+SELECT rideable_type
+FROM cyclistic_users
+GROUP BY rideable_type;
+-- there are three types of bike: classic, electric and docked.
+
+-- 4) started_at, ended_at: ride duration
+SELECT ride_id, started_at, ended_at
+FROM cyclistic_users	
+WHERE 
+TIMESTAMPDIFF(MINUTE, ended_at, started_at) <= 1 OR
+TIMESTAMPDIFF(MINUTE, ended_at, started_at) >= 1440;
+-- check if the ride time is less than a minute or longer than a day. 
+-- the end time is behind the start time.
+-- There are 5,730,879 rows meeting the condition.
+
+-- 5) name & id of start_station and end_station
+
+SELECT start_station_id, end_station_id,
+    COUNT(*) - COUNT(NULLIF(start_station_id, '')) AS null_start_station_count,
+    COUNT(*) - COUNT(NULLIF(end_station_id, '')) AS null_end_station_count
+FROM cyclistic_users
+GROUP BY start_station_id, end_station_id
+HAVING start_station_id = '' OR end_station_id = '';
+-- 489,243 null values observed. 
+-- the string lengths of station id are inconsistent. however, it will be ignored as the station id is not important in our analysis.
+
+-- 6) lat & lng of start and end
+SELECT * 
+FROM `2022_divvy_trip_data.cyclistic_data`
+WHERE
+start_lat IS NULL OR
+start_lng IS NULL OR
+end_lat IS NULL OR
+end_lng IS NULL;
+-- No NULL values are observed.
+
+-- 7) member_casual: type of membership 
+SELECT member_casual, COUNT(*) as membership_count
+FROM cyclistic_user
+GROUP BY member_casual;
+-- Only two types: member and causal. 
+-- There is only 1 value out of the types of membership.
+```
 
 I ran the queries for each column from left to right in order to determine the data type and to uncover any missing values, outliers, inconsistencies, and errors within the dataset.
 
@@ -69,14 +172,14 @@ The data set consists of 13 variables, as shown in the following with the data t
 | No.|      Variable 	    |                 Description                 |   Type   |   Mode    |
 |----|--------------------|---------------------------------------------|----------|-----------|
 |1   |ride_id             |ID number assigned to each ride              |Varchar   |Nullable   |
-|2	  |rideable_type	      |Electric bike, Classic bike and, Docked bike |Varchar   |Nullable   |
-|3   |started_at	         |Date and time at the start of trip           |Timestamp |Nullable   |
-|4	  |ended_at	           |Date and time at the end of trip             |Timestamp |Nullable   |
-|5	  |start_station_name	 |Name of the station where the ride started   |Varchar   |Nullable   |
-|6	  |start_station_id	   |ID of the station where the ride started     |Varchar   |Nullable   |
-|7	  |end_station_name	   |Name of the station where the ride ended     |Varchar   |Nullable   |
-|8 	 |end_station_id	     |ID of the station where the ride ended       |Varchar   |Nullable   |
-|9	  |start_lat	          |Latitude of starting station                 |Float     |Nullable   |
+|2	  |rideable_type	    |Electric bike, Classic bike and, Docked bike |Varchar   |Nullable   |
+|3   |started_at	        |Date and time at the start of trip           |Timestamp |Nullable   |
+|4	  |ended_at	          |Date and time at the end of trip             |Timestamp |Nullable   |
+|5	  |start_station_name	|Name of the station where the ride started   |Varchar   |Nullable   |
+|6	  |start_station_id	  |ID of the station where the ride started     |Varchar   |Nullable   |
+|7	  |end_station_name	  |Name of the station where the ride ended     |Varchar   |Nullable   |
+|8 	 |end_station_id	    |ID of the station where the ride ended       |Varchar   |Nullable   |
+|9	  |start_lat	        |Latitude of starting station                 |Float     |Nullable   |
 |10	 |start_lng	          |Longitude of starting station                |Float     |Nullable   |
 |11	 |end_lat	            |Latitude of ending station                   |Float     |Nullable   |
 |12	 |end_lng	            |Longitude of ending station                  |Float     |Nullable   |
@@ -90,6 +193,75 @@ Before analyzing the data, the dataset was cleaned by:
 + Adding 2 new columns: 'ride_length' and 'day_of_week'.
 + Exclusing the rides with duration less than a minute or longer than a day.
 
+```sql
+-- Create the columns 'month' and 'day_of week' 
+-- Determine the ride length in minutes 
+-- Remove rows with null values
+
+CREATE TABLE cyclistic_cleaned AS (
+  SELECT 
+    t1.ride_id, 
+    t1.rideable_type,
+    t1.started_at,
+    t1.ended_at,
+    t2.ride_length_in_mins,
+    CASE 
+      EXTRACT(MONTH FROM t1.started_at)
+        WHEN 1 THEN 'January'
+        WHEN 2 THEN 'February'
+        WHEN 3 THEN 'March'
+        WHEN 4 THEN 'April'
+        WHEN 5 THEN 'May'      
+        WHEN 6 THEN 'June'
+        WHEN 7 THEN 'July'
+        WHEN 8 THEN 'August'
+        WHEN 9 THEN 'September'
+        WHEN 10 THEN 'October'      
+        WHEN 11 THEN 'November'
+        WHEN 12 THEN 'December'
+    END AS month,
+    CASE DAYOFWEEK(t1.started_at)
+      WHEN 1 THEN 'Sunday'
+      WHEN 2 THEN 'Monday'
+      WHEN 3 THEN 'Tuesday'
+      WHEN 4 THEN 'Wednesday'
+      WHEN 5 THEN 'Thursday'
+      WHEN 6 THEN 'Friday'
+      WHEN 7 THEN 'Saturday'    
+    END AS day_of_week,
+    t1.start_station_name,
+    t1.start_station_id,
+    t1.end_station_name,
+    t1.end_station_id,
+    t1.start_lat,
+    t1.start_lng,
+    t1.end_lat,
+    t1.end_lng,
+    t1.member_casual
+  FROM 
+    cyclistic_users AS t1
+  JOIN 
+    (SELECT 
+        ride_id,
+        TIMESTAMPDIFF(MINUTE, started_at, ended_at) AS ride_length_in_mins
+     FROM 
+        cyclistic_users
+    ) AS t2
+  USING (ride_id)
+  WHERE 
+    t2.ride_length_in_mins > 1 
+    AND t2.ride_length_in_mins < 1440 
+    AND t1.start_station_name IS NOT NULL 
+    AND t1.start_station_id IS NOT NULL 
+    AND t1.end_station_name IS NOT NULL 
+    AND t1.end_station_id IS NOT NULL 
+    AND t1.start_lat IS NOT NULL 
+    AND t1.start_lng IS NOT NULL 
+    AND t1.end_lat IS NOT NULL 
+    AND t1.end_lng IS NOT NULL
+);
+```
+
 In total, 5,479,974 rows were returned, which means 251,058 rows were removed.
 
 
@@ -101,6 +273,63 @@ The analysis question is:
 
 The cleaned data is imported into Power BI for analysis and the figures plotted are displayed in the following.
 
+```sql
+-- 1. I downloaded the file in CVS to be exported to Power BI
+SELECT * INTO OUTFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\cyclistic_cleaned' 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"' 
+LINES TERMINATED BY '\n' 
+FROM nombre_de_tu_tabla;
+
+-- CHECK QUERIES
+
+-- 2. Total rides from July 2023 to June 2024
+Select member_casual, count(member_casual) AS count
+from cyclistic.cyclistic_cleaned
+Group by member_casual
+
+-- 3. Types of bike per type of user  
+SELECT rideable_type, member_casual, count(rideable_type) AS rideable_count
+FROM cyclistic.cyclistic_cleaned
+group by rideable_type, member_casual
+
+-- 4. Average of rides length in minutes
+select member_casual, AVG(ride_length_in_mins) AS average_ride
+from cyclistic.cyclistic_cleaned
+group by member_casual
+
+-- 5. Trips per month
+SELECT member_casual, month, 
+COUNT(*) AS total_rides_per_month
+FROM cyclistic.cyclistic_cleaned
+GROUP BY member_casual, month
+ORDER BY member_casual;
+
+-- 6. Average of trips per month  
+SELECT member_casual, month, 
+AVG(ride_length_in_mins) AS average_ride,
+COUNT(*) AS total_rides_per_month
+FROM cyclistic.cyclistic_cleaned
+GROUP BY member_casual, month
+ORDER BY member_casual;
+
+-- 7. Trips per day of week
+SELECT member_casual, day_of_week, 
+COUNT(*) AS total_rides_per_week
+FROM cyclistic.cyclistic_cleaned
+GROUP BY member_casual, day_of_week
+ORDER BY member_casual;
+
+-- 8. Average of trips per day of week
+SELECT member_casual, day_of_week, 
+AVG(ride_length_in_mins) AS average_ride,
+COUNT(*) AS total_rides_per_month
+FROM cyclistic.cyclistic_cleaned
+GROUP BY member_casual, day_of_week
+ORDER BY member_casual;
+
+-- All this queries results were the same as the results in Power BI.
+```
 
 + Total Rides in 2023-2024
   
