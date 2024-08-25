@@ -1,3 +1,4 @@
+
 -- 1. I downloaded the file in CVS to be exported to Power BI
 SELECT * INTO OUTFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\cyclistic_cleaned' 
 FIELDS TERMINATED BY ',' 
@@ -51,3 +52,5 @@ COUNT(*) AS total_rides_per_month
 FROM cyclistic.cyclistic_cleaned
 GROUP BY member_casual, day_of_week
 ORDER BY member_casual;
+
+-- All this queries results were the same as the results in Power BI.
