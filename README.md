@@ -91,7 +91,8 @@ Before analyzing the data, the dataset was cleaned by:
 
 In total, 5,479,974 rows were returned, which means 251,058 rows were removed.
 
-4. Analyze
+### 4. ANALYZE
+
 Data Analysis
 The analysis question is:
 
@@ -160,40 +161,36 @@ On the other hand, casual riders cycled the longest on Saturday with a mean trip
 
 [Public Power BI visualization](https://uexternadoedu-my.sharepoint.com/:u:/g/personal/martin_lievano_est_uexternado_edu_co/EQ01lQI9bV9DhNEgVgNaWEsBiZaN-C2JLp6hkgHtBG1msg?e=PoaUd8)
 
-
 The similiarities and differences between Cyclistic members and casual riders were drawn from the dashboard above.
 
-Similarities:
+**Similarities:**
 
-Both Cyclistic members and casual riders prefer riding bicycles in the spring and summer seasons (from May to September). However, the number of rides decrease since September. This may be due to change of season in which the weather temperature drops and becomes uncomfortable for rides.
-Both Cyclistic members and casual riders prefer classic bicycles over electric bicycles.
-Both Cyclistic members and casual riders have higher average ride duration on weekends as compared to on weekdays.
-Differences:
++ Weather is an important factor. Sprimg and summer are the seasons with the most rides in the observed months, while falla and winter have the lowest ammount of rides. This may be due to change of season in which the weather temperature drops and becomes uncomfortable for rides.
++ Classic rules. Both Cyclistic members and casual riders prefer classic bicycles over electric bicycles. However, the use of electric bikes is reaching out the the use of classic bikes.
++ Wekends are funnier: Both Cyclistic members and casual riders have higher average ride duration on weekends as compared to on weekdays.
 
-Cyclistic members go on more rides than casual riders.
-Cyclistic members have smaller average ride length (12.41 minutes) than casual riders (23.82 minutes). Hence, this may suggest that the Cyclistic members take the bicycles for short trips or short distance travel.
-Cyclistic members show consistent rides throughout the week while casual riders have the busiest activites on weekends and lowest activities during weekdays. This may indicate that the Cyclistic members use the bicycles for *purpose-oriented rides such as work or errands while the casual riders use bicycles for leisure or recreational activities.
-6. Act
+**Differences:**
+
++ Cyclistic members are more active than casual riders having the highest number of rides.
++ Cyclistic members have smaller average ride length than casual riders. This may suggest that the Cyclistic members take the bicycles for short trips or short distance travel, for example to go to work everyday and, while casuals may be tourists.
++ Cyclistic members show consistent rides throughout the weekwith small changes in the average length while casual riders have the busiest activites on weekends and lowest activities during weekdays.
+
+ ### 5. ACT
+ 
 Recommendations
+
 From the analysis above, we can design marketing strategies to convert casual riders to Cyclistic members. Here are my suggested approach:
+Membership for smaller periods Provide a range of smaller periods than a year: monthly, weekly and daily. Users will be able to choose their membership type according to their own preferences and needs. By introducing shorter-term membership plans with appropriate pricing, we can cater the needs of riders who might not need an annual membership.
 
-Membership Personalisation
-Provide a range of membership personalizations: yearly, monthly and daily. For example, $365/year, $45/month, $3/day. Users will be able to choose their membership type according to their own preferences. By introducing shorter-term membership plans with appropriate pricing, we can cater the needs of riders who might not need an annual membership.
+Group Membership Discounts Offer discounted plans for friends, students, and families can encourage collective memberships. Furthermore, it encourages users to cycle together and strengthen the bonds between people.
 
-Group Membership Discounts
-Offerdiscounted plans for friends, students, and families can encourage collective memberships. Furthermore, it encourages users to cycle together and strengthen the bonds between people.
+Membership Rewards Program Implement a membership rewards program system for users to collect points for each ride or discounts such as membership discount based on the number of points collected or rides made. This will encourage riders to use the service more frequently, driving engagement and loyalty.
 
-Membership Loyalty Points System
-Implement a membership loyalty points system for users to collect points for each ride. Rewards such as membership discount will be given based on the number of points collected. This will encourage riders to use the service more frequently, driving engagement and loyalty.
+Member-Exclusive Events Organize member-exclusive events such as group rides, urban exploration challenges, or themed cycling events. This approach not only encourages more rides from current members but also entices casual riders to join as members to participate in these unique experiences.
 
-Member-Exclusive Events
-Organize member-exclusive events such as group rides, urban exploration challenges, or themed cycling events. This approach not only encourages more rides from current members but also entices casual riders to join as members to participate in these unique experiences.
+Seasonal Campaigns Launch seasonal campaigns by offering limited-time discounts, special weekdays offers, or extended ride durations for members during these seasons to help in making the service more sustainable and manageable.
 
-Seasonal campaigns
-Launch seasonal campaigns by offering limited-time discounts, special weekdays offers, or extended ride durations for members during these seasons to help in making the service more sustainable and manageable.
+Social Media Campaigns Utilize social media platforms to engage with both casual riders and potential members. Share success stories, testimonials, and user-generated content from Cyclistic members who have benefited from the membership. Create visually appealing content showcasing the joy of cycling during different seasons and scenarios, enticing casual riders to become members.
 
-Social Media Engagement
-Utilize digital media, including social media platforms, to engage with both casual riders and potential members. Share success stories, testimonials, and user-generated content from Cyclistic members who have benefited from the membership. Create visually appealing content showcasing the joy of cycling during different seasons and scenarios, enticing casual riders to become members.
-
-🔮 Conclusion
+Conclusion
 In short, this analysis provides valuable insights into the preferences and behaviors of Cyclistic members and casual riders. By tailoring strategies to the identified differences and preferences, Cyclistic can effectively convert casual riders into portential members.
