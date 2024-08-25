@@ -93,7 +93,6 @@ In total, 5,479,974 rows were returned, which means 251,058 rows were removed.
 
 ### 4. ANALYZE
 
-Data Analysis
 The analysis question is:
 
 How do annual members and casual riders use Cyclistic bikes differently?
@@ -165,7 +164,7 @@ The similiarities and differences between Cyclistic members and casual riders we
 
 **Similarities:**
 
-+ Weather is an important factor. Sprimg and summer are the seasons with the most rides in the observed months, while falla and winter have the lowest ammount of rides. This may be due to change of season in which the weather temperature drops and becomes uncomfortable for rides.
++ Weather is an important factor. Spring and summer are the seasons with the most rides in the observed months, while falla and winter have the lowest ammount of rides. This may be due to change of season in which the weather temperature drops and becomes uncomfortable for rides.
 + Classic rules. Both Cyclistic members and casual riders prefer classic bicycles over electric bicycles. However, the use of electric bikes is reaching out the the use of classic bikes.
 + Wekends are funnier: Both Cyclistic members and casual riders have higher average ride duration on weekends as compared to on weekdays.
 
@@ -192,5 +191,6 @@ Seasonal Campaigns Launch seasonal campaigns by offering limited-time discounts,
 
 Social Media Campaigns Utilize social media platforms to engage with both casual riders and potential members. Share success stories, testimonials, and user-generated content from Cyclistic members who have benefited from the membership. Create visually appealing content showcasing the joy of cycling during different seasons and scenarios, enticing casual riders to become members.
 
-Conclusion
+### Conclusion
+
 In short, this analysis provides valuable insights into the preferences and behaviors of Cyclistic members and casual riders. By tailoring strategies to the identified differences and preferences, Cyclistic can effectively convert casual riders into portential members.
