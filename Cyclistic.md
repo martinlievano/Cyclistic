@@ -59,7 +59,7 @@ The basis for this analysis is 2023-2024 data and the steps for processing the d
 [Data Combining](#data-combining)
 [Data Exploration](#data-exploration)
 
-####**Data Combining**
+#### Data Combining
 
 ```sql
 
@@ -96,7 +96,7 @@ ignore 1 rows;
 
 The 12 tables from July 2023 to June 2024 were stacked and combined into a single table. The table consists of 5,731,032 rows.
 
-####**Data Exploration**
+#### Data Exploration
 
 ```sql
 -- 1) Check the number of empty values in each column
