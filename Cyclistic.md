@@ -51,13 +51,10 @@ Design marketing strategies aimed at converting casual riders into annual member
 
 The basis for this analysis is 2023-2024 data and the steps for processing the data are as follow:
 
-+ [Data Combining](https://github.com/martinlievano/Cyclistic/blob/main/01_data_combinig.sql)
-+ [Data Exploration](https://github.com/martinlievano/Cyclistic/blob/main/02_data_exploration.sql)
-+ [Data Cleaning](https://github.com/martinlievano/Cyclistic/blob/main/03_data_cleaning.sql)
-+ [Data Analysis](https://github.com/martinlievano/Cyclistic/blob/main/04_data_analysis.sql)
-
-[Data Combining](#data-combining)
-[Data Exploration](#data-exploration)
++ [Data Combining](#data-combining)
++ [Data Exploration](#data-exploration)
++ [Data Cleaning](#data-cleaning)
++ [Data Analysis](#data-analysis)
 
 #### Data Combining
 
