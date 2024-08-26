@@ -54,7 +54,6 @@ The basis for this analysis is 2023-2024 data and the steps for processing the d
 + [Data Combining](#data-combining)
 + [Data Exploration](#data-exploration)
 + [Data Cleaning](#data-cleaning)
-+ [Data Analysis](#data-analysis)
 
 #### Data Combining
 
@@ -184,7 +183,7 @@ The data set consists of 13 variables, as shown in the following with the data t
 |12	 |end_lng	            |Longitude of ending station                  |Float     |Nullable   |
 |13	 |member_casual	      |Type of membership of each rider             |Tinytext  |Nullable   |
 
-**Data Cleaning**
+#### Data Cleaning
 
 Before analyzing the data, the dataset was cleaned by:
 
