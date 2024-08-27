@@ -385,7 +385,6 @@ The bar chart below is used to study the daily user activity over a week.
 
 ![6](https://github.com/user-attachments/assets/6b16709c-c751-4727-8a6d-fe316905d8fd)
 
-
 Generally, bike rides are most frequented on Saturdays.
 Cyclistic members have the highest activity (565,654 rides) on Wednesdays while the lowest activity (405,234 rides) on Sundays.
 Casual riders have the greatest activity (398,855 rides) on Saturdays while the least activity (227,049 rides) on Mondays.
@@ -400,7 +399,11 @@ The mean ride duration across the week is displayed as follow.
 Cyclistic members cycled the longest on Saturday with an average ride length of 13,9 minutes.
 On the other hand, casual riders cycled the longest on Saturday with a mean trip duration of 25.3 minutes.
 
-This is the [Public Dashboard in Power BI](https://uexternadoedu-my.sharepoint.com/:u:/g/personal/martin_lievano_est_uexternado_edu_co/EQ01lQI9bV9DhNEgVgNaWEsBiZaN-C2JLp6hkgHtBG1msg?e=PoaUd8).
+### 5. SHARE
+
+![8](https://github.com/user-attachments/assets/77c374fe-b149-4c41-a8c1-2ba28f189eaa)
+
+This is the [Dashboard in Power BI](https://uexternadoedu-my.sharepoint.com/:u:/g/personal/martin_lievano_est_uexternado_edu_co/EQ01lQI9bV9DhNEgVgNaWEsBiZaN-C2JLp6hkgHtBG1msg?e=PoaUd8).
 
 These are the findings after all the analysis process of the Cycistic dataset drawn from the dashboard above:
 
@@ -411,7 +414,7 @@ These are the findings after all the analysis process of the Cycistic dataset dr
 + ***Members ride less time.*** Cyclistic members have smaller average ride length than casual riders. This may suggest that the Cyclistic members take the bicycles for short trips or short distance travel, for example to go to work everyday and, while casuals may be tourists and this may be the reason for longer rides.
 
 
- ### 5. ACT
+ ### 6. ACT
  
 **Recommendations**
 
